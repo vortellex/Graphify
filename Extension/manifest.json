@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Graphify",
+  "version": "1.0",
+  "description": "Transforms Wikipedia pages into interactive knowledge graphs",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.wikipedia.org/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.wikipedia.org/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
